@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .row {
+        height: 300px;
+        background-color: silver;
+        display: flex;
+        /* justify-content: center; */
+        justify-content: center;
+        /* align-items: center; */
+        align-items: center;
+      }
+
+      .box {
+        /* background-color: orange; */
+        background: linear-gradient(green, yellow);
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid red;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px 2px blue;
+        transition-property: transform;
+        transition-duration: 0.5s;
+      }
+      .box:hover {
+        transform: scale(1.2, 1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Temp 7</h1>
+    <hr />
+    <div class="container">
+        <div>
+            <h1>My Application</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+    <div class="row">
+      <div class="box">
+        <h2>Project 1</h2>
+        <p>This is the description</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="box">
+        <h2>Project 2</h2>
+        <p>This is the description</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="box">
+        <h2>Project 3</h2>
+        <p>This is the description</p>
+        <a href="#">View Project</a>
+      </div>
+    </div>
+</div>
+  </body>
+</html>

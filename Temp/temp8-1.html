@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        /* background-color: silver; */
+        padding: 10px;
+        width: 250px;
+      }
+      .box p {
+        background-color: white;
+        border: 1px solid gray;
+      }
+      input {
+        border: none;
+      }
+
+      button {
+        width: 100%;
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+        padding: 10px;
+        border: none;
+      }
+      .loginOption {
+        border: 1px gray solid;
+        border-radius: 20px;
+        padding: 7px;
+        margin-top: 20px;
+        text-align: center;
+        color: grey;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Temp 8</h1>
+    <hr />
+    <div class="container">
+      <div class="box">
+        <h2>Sign in</h2>
+        <div class="loginOption">Continue with Google</div>
+        <div class="loginOption">Continue with Apple</div>
+        <div>
+          <p>
+            Email or Phone<br />
+            <input type="text" />
+          </p>
+        </div>
+        <div>
+          <p>
+            Password<br />
+            <input type="password" />
+          </p>
+        </div>
+        <div>
+          <a href="#">Forgot Password?</a>
+        </div><br>
+        <div>
+            <input type="checkbox">Keep me signed in
+        </div><br>
+        <button>Sign in</button>
+      </div>
+    </div>
+  </body>
+</html>

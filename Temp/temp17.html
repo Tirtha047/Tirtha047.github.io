@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let users = [];
+      function chkUser(){
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let length = users.length
+        for(let i=0;i<length;i++){
+          if(users[i].email==email && users[i].password==password){
+            root.innerHTML = `
+            <div>Welcome</div>
+            <button onclick='showLogin()'>Logout</button>
+            `
+          }
+        }
+      }
+      function showLogin(){
+        root.innerHTML = `
+        <h1>Login Form</h1>
+        <p><input type="text" id="email" /></p>
+        <p><input type="password" id="password" /></p>
+         <button onclick="chkUser()">Log In</button>
+          <button onclick="showForm()">Create Account</button>
+        `
+      }
+
+      function showForm() {
+        root.innerHTML = `
+        <h1>New User Signup Form</h1>
+        <p><input type="text" id="name" /></p>
+        <p><input type="text" id="email" /></p>
+        <p><input type="password" id="password" /></p>
+        <p><input type="date" id="dob" /></p>
+        <button onclick="addUser()">Register</button>
+        <div id="data"></div>
+        `;
+      }
+
+      function deleteUser(index) {
+        users.splice(index, 1);
+        showUsers();
+      }
+      function showUsers() {
+        let length = users.length;
+        let str = "";
+        for (let i = 0; i < length; i++) {
+          str += `<div>
+                    ${users[i].name}-
+                    ${users[i].email}-
+                    ${users[i].password}-
+                    ${users[i].dob}-
+                    <button onclick='deleteUser(${i})'>Delete</button>
+                    </div>`;
+        }
+        data.innerHTML = str;
+      }
+
+      function addUser() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let dob = document.getElementById("dob").value;
+        let user = {
+          name: name,
+          email: email,
+          password: password,
+          dob: dob,
+        };
+        users.push(user);
+        showUsers();
+        showLogin()
+        //data.innerHTML = `${name}, ${email}, ${password}, ${dob}`
+      }
+      //   showForm()
+    </script>
+  </head>
+  <body onload="showLogin()">
+    <div id="root"></div>
+    <!-- <h1>New User Signup Form</h1>
+    <p><input type="text" id="name" /></p>
+    <p><input type="text" id="email" /></p>
+    <p><input type="password" id="password" /></p>
+    <p><input type="date" id="dob" /></p>
+    <button onclick="addUser()">Register</button>
+    <div id="data"></div> -->
+  </body>
+</html>
